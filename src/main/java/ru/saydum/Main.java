@@ -11,7 +11,7 @@ import java.util.List;
 public class Main {
     public static boolean isAscending = true;
     public static boolean isString = true;
-//    public static String encoding = "utf-8";
+    public static String encoding = "utf-8";
     public static String outputFileName = "";
     public static List<String> inputFileNames = new ArrayList<>();
     public static List<String> readLineData = new ArrayList<>();
@@ -36,10 +36,6 @@ public class Main {
         }
 
         new Sorter(arr);
-        for (int j: sortedIntLine) {
-            System.out.println(j);
-        }
-
         // Sorter sorterStringFiles = new Sorter(ArrayList<String> readerFiles, boolean stateSorter);
 
         // Writer out.txt
