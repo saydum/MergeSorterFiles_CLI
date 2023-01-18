@@ -89,6 +89,7 @@ public class ParserCmd {
             }
         }
 
+        assert cmd != null;
         List<String> files = cmd.getArgList();
         if (files.size() < 2) {
             System.out.println("Отсутствует имя файла для результата, или хотя бы одно имя входного файла.");
@@ -106,7 +107,7 @@ public class ParserCmd {
     private static void usagePrint(Options opt) {
         HelpFormatter formatter = new HelpFormatter();
         formatter.printHelp("""
-                sort-it.exe [opt] output.file input.files... \n
+                sort-it.exe [OPTIONS] output.file input.files... \n
                 output.file  Обязательное имя файла с результатом сортировки. \n
                 input.files  Один, или больше входных файлов.
                 """, opt);
