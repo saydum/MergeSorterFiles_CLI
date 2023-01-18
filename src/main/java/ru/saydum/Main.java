@@ -15,7 +15,9 @@ public class Main {
     public static List<String> inputFileNames = new ArrayList<>();
     public static List<String> readLineData = new ArrayList<>();
 
-    public static boolean stateSorter = true; // true = String || false = Integer
+    public static List<Integer> sortedIntLine = new ArrayList<>();
+
+    public static boolean dataSortType = true; // true = String || false = Integer
 
     public static void main(String[] args) {
         // CMD Parser
@@ -25,7 +27,17 @@ public class Main {
         readLineData =  new Reader(inputFileNames).getReadLineData();
 
         // Sorter -i -s (-a --abs, -d --desc)
-        Sorter sorterIntFiles = new Sorter(readLineData);
+        int[] arr = new int[readLineData.size()];
+        int i = 0;
+        for(String s : readLineData) {
+            arr[i] = Integer.valueOf(s);
+            i++;
+        }
+
+        new Sorter(arr);
+        for (int j: sortedIntLine) {
+            System.out.println(j);
+        }
 
         // Sorter sorterStringFiles = new Sorter(ArrayList<String> readerFiles, boolean stateSorter);
 
