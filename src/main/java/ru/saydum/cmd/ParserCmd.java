@@ -11,11 +11,12 @@ import ru.saydum.Main;
 import java.util.List;
 
 public class ParserCmd {
+    private final String[] args;
     public ParserCmd(String[] args) {
-        parser(args);
+        this.args = args;
     }
 
-    private void parser(String[] args) {
+    public void parser() {
         Options opt = new Options();
 
         opt.addOption(
