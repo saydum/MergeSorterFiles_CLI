@@ -3,6 +3,7 @@ package ru.saydum;
 import ru.saydum.cmd.ParserCmd;
 import ru.saydum.reader.Reader;
 import ru.saydum.sorter.Sorter;
+import ru.saydum.writer.Writer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,14 +11,14 @@ import java.util.List;
 public class Main {
     public static boolean isAscending = true;
     public static boolean isString = true;
-    public static String encoding = "utf-8";
+//    public static String encoding = "utf-8";
     public static String outputFileName = "";
     public static List<String> inputFileNames = new ArrayList<>();
     public static List<String> readLineData = new ArrayList<>();
 
     public static List<Integer> sortedIntLine = new ArrayList<>();
 
-    public static boolean dataSortType = true; // true = String || false = Integer
+//    public static boolean dataSortType = true; // true = String || false = Integer
 
     public static void main(String[] args) {
         // CMD Parser
@@ -42,6 +43,6 @@ public class Main {
         // Sorter sorterStringFiles = new Sorter(ArrayList<String> readerFiles, boolean stateSorter);
 
         // Writer out.txt
-//        Writer writer = new Writer(sorterIntFiles);
+        new Writer(outputFileName, sortedIntLine);
     }
 }
